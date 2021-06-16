@@ -19,7 +19,7 @@ function getUserById($id)
                 return false;
             }
     });
-    return $user;
+    return $user[0];
 }
 
 function createUser($data) 
