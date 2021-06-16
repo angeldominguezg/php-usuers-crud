@@ -7,6 +7,7 @@ $users =  getUsers();
 
 <content>
     <div class="container">
+        <a href="create.php">Add User</a>
         <table class="table-auto">
             <thead>
                 <tr class="bg-gray-100">

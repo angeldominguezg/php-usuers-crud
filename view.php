@@ -9,8 +9,7 @@ $user =  getUserByID($id);
 ?>
 <content>
     <div class="container">
-        <hr>
-        <h1>User View</h1>
+        <h1>User User</h1>
         <div>
             <label for="">Name: </label>
             <em><?php echo $user['name']?></em>
