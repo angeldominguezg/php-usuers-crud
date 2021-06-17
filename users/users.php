@@ -28,16 +28,32 @@ function createUser($data)
     $data['id'] = rand(1000000, 2000000);
     $users[] = $data;
 
-    file_put_contents(__DIR__ . '/users.json', json_encode($users, JSON_PRETTY_PRINT));
+    putJson($users);
 
 }
 
 function updateUser($data, $id)
 {
+    $users = getUsers();
+    $updateUser = [];
+
+    foreach($users as $index => $user) {
+        if( $user['id'] == $id) {
+            $users[$index] = $updateUser = array_merge($user, $data);
+        }
+    }
+
+    putJson($users);
+
+    return $updateUser;
 
 }
 
 function deleteUser($id)
 {
 
+}
+
+function putJson($users) {
+    file_put_contents(__DIR__ . '/users.json', json_encode($users, JSON_PRETTY_PRINT));
 }
