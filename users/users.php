@@ -38,7 +38,7 @@ function updateUser($data, $id)
     $updateUser = [];
 
     foreach($users as $index => $user) {
-        if( $user['id'] == $id) {
+        if ($user['id'] == $id) {
             $users[$index] = $updateUser = array_merge($user, $data);
         }
     }
@@ -51,7 +51,15 @@ function updateUser($data, $id)
 
 function deleteUser($id)
 {
+    $users = getUsers();
 
+    foreach($users as $index => $user) {
+        if ($user['id'] == $id) {
+            array_splice($users, $index, 1);
+        }
+    }
+
+    putJson($users);
 }
 
 function putJson($users) {

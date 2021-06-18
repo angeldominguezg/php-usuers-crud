@@ -1,13 +1,15 @@
 <?php
-require './users/users.php';
-require './partials/header.php';
-$users =  getUsers();
-?>
-<content>
-    <div class="container">
-        <h1>Delete View</h1>
-    </div>
-</content>
-<?php
-require './partials/footer.php';
+include './partials/header.php';
+require __DIR__ . '/users/users.php';
+
+if (!isset($_POST['id'])) {
+    // TODO Not Found Page
+    exit;
+}
+
+$userId = $_POST['id'];
+deleteUser($userId);
+
+// header("Location: index.php");
+
 ?>

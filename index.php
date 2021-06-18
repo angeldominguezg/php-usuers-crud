@@ -35,9 +35,10 @@ $users =  getUsers();
                             <a href="edit.php?id=<?php echo $user['id']; ?>" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4">
                                 Edit
                             </a>
-                            <a href="delete.php?id=<?php echo $user['id']; ?>" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
-                                Delete
-                            </a>
+                            <form action="delete.php" method="post">
+                                <input type="hidden" name="id" value="<?php echo $user['id'] ?>">
+                                <button type="submit" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">Delete</button>
+                            </form>
                         </div>
                     </td>
                 </tr>
