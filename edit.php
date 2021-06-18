@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="website">Website</label>
                 <input class="bg-gray-200" type="text" name="website" value="<?php echo $user['website']?>">
             </div>
-            <button type="submit">Edit User</button>
+            <button type="submit">Update User</button>
         </form>
 </content>
 <?php

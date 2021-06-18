@@ -30,6 +30,13 @@ $user =  getUserByID($id);
             <label for="">Website: </label>
             <em><?php echo $user['website']?></em>
         </div>
+
+        <!-- Update -->
+        <a href="edit.php?id=<?php echo $user['id'] ?>">Edit</a>
+        <!-- Delete -->
+        <a href="delete.php?id=<?php echo $user['id'] ?>">Delete</a>
+        <!-- Back -->
+        <a href="index.php">Back</a>
     </div>
 </content>
 <?php
