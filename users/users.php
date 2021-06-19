@@ -8,7 +8,7 @@ function getUsers()
     // echo '</pre>';
 }
 
-function getUserById($id) 
+function getUserById($id)
 {
     $users = getUsers();
 
