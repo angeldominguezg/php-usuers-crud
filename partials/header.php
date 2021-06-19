@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./css/tailwind.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Header</h1>
+<body class="sm:bg-red-400 md:bg-yellow-300 lg:bg-green-300 x1: bg-blue-300">
+    <header class="container px-10">
+        <div class="space-x-2">
+            <img class="inline-block h-32" src="./img/logo.png" alt="Users admin Logo">
+            <div class="inline-block align-middle">
+                <h2 class="font-logo font-extrabold text-3xl text-gray-700">Fake Users Admin</h2>
+                <p class="font-logo text-gray-700">php & tailwindcss</p>
+            </div>
+        </div>
     </header>
     <hr>

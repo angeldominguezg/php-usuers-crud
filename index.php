@@ -1,5 +1,4 @@
 <?php
-
 require './users/users.php';
 require './partials/header.php';
 $users =  getUsers();
@@ -7,7 +6,7 @@ $users =  getUsers();
 
 <content>
     <div class="container">
-        <a href="create.php">Add User</a>
+        <a class="red" href="create.php">Add User</a>
         <table class="table-auto">
             <thead>
                 <tr class="bg-gray-100">
