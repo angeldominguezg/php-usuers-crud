@@ -12,14 +12,13 @@ function getUserById($id)
 {
     $users = getUsers();
 
-    $user = array_filter($users, function($obj) use($id){
-            if( $obj['id'] == $id) {
-                return true;
-            } else {
-                return false;
-            }
-    });
-    return $user[0];
+    foreach ($users as $key => $user) {
+        if($user['id'] == $id) {
+            return $user;
+        }
+    }
+
+    return null;
 }
 
 function createUser($data) 
