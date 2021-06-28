@@ -3,11 +3,17 @@ require './users/users.php';
 require './partials/header.php';
 
 
+if(!isset($_GET['id'])) {
+    include './partials/not_found.php';
+    exit;
+}
+
 $id = $_GET['id'];
 $user =  getUserByID($id);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    updateUser($_POST, $id);
+if(!isset($user)) {
+    include './partials/not_found.php';
+    exit;
 }
 ?>
 <content>
