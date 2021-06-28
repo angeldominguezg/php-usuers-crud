@@ -1,11 +1,21 @@
 <?php
 require './users/users.php';
 require './partials/header.php';
+
+
+if(!isset($_GET['id'])) {
+    include './partials/not_found.php';
+    exit;
+}
+
 $id = $_GET['id'];
 $user =  getUserByID($id);
-// echo '<pre>';
-// var_dump($user);
-// echo '</pre>';
+
+if(!isset($user)) {
+    include './partials/not_found.php';
+    exit;
+}
+
 ?>
 <content>
     <div class="container mx-auto px-4">
