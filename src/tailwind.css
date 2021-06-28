@@ -9,10 +9,7 @@
         text-sm font-bold cursor-pointer tracking-wide
 }
 
+
 .btn-primary {
     @apply bg-green-500 text-white
-}
-
-.btn-secondary {
-
 }

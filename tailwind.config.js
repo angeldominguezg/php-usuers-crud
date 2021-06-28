@@ -4,12 +4,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        logo: ['"Titillium Web"', 'bold']
+        logo: ['"Titillium Web"', 'bold'],
       }
     }
   },
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
   variants: {
     extend: {},
   },
-  plugins: [],
 }

@@ -25,31 +25,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div>
                         <label for="name">Name</label>
                         <div class="mt-1">
-                            <input class="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="name" value="<?php echo $user['name']?>">
+                            <input type="text" class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" name="name" value="<?php echo $user['name']?>">
                         </div>
                     </div>
                     <div>
                         <label for="user-name">User Name</label>
                         <div class="mt-1">
-                            <input class="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="username" value="<?php echo $user['username']?>">
+                            <input class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="username" value="<?php echo $user['username']?>">
                         </div>
                     </div>
                     <div>
                         <label for="email">Email</label>
                         <div class="mt-1">
-                            <input class="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="email" value="<?php echo $user['email']?>">
+                            <input class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="email" value="<?php echo $user['email']?>">
                         </div>
                     </div>
                     <div>
                         <label for="phone">Phone</label>
                         <div class="mt-1">
-                            <input class="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="phone" value="<?php echo $user['phone']?>">
+                            <input class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="phone" value="<?php echo $user['phone']?>">
                         </div>
                     </div>
                     <div>
                         <label for="website">Website</label>
                         <div class="mt-1">
-                            <input class="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="website" value="<?php echo $user['website']?>">
+                            <input class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="website" value="<?php echo $user['website']?>">
                         </div>
                     </div>
                 </div>
