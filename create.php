@@ -1,40 +1,35 @@
 <?php
 require './users/users.php';
 require './partials/header.php';
-
-// echo '<pre>';
-// var_dump($_POST);
-// echo '</pre>';
+$user = [
+    'name' => "",
+    'username' => "",
+    'email' => "",
+    'phone' => "",
+    'website' => "",
+    'website' => "",
+];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    createUser($_POST);
+    $user = createUser($_POST);
+    uploadImage($_FILES['photo'], $user);
+    header('location: index.php');
 }
 ?>
 <content>
-    <div class="container">
-        <h1>Create User</h1>
-        <form action="create.php" method="post">
-            <div>
-                <label for="name">Name</label>
-                <input class="bg-gray-200" type="text" name="name">
+    <div class="container mx-auto px-4">
+        <div class="card w-96 shadow-2xl rounded-lg mx-auto">
+            <div class="card-header relative h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-t-lg">
+                <h1 class="absolute top-5 left-4 font-extrabold text-4xl right-0 text-white">
+                    <?php if(isset($user['id'])):?>
+                    #<?php echo $user['id']; ?>
+                    <?php else: ?>
+                    New User
+                    <?php endif; ?>
+                </h1>
+                <img class="absolute top-4 right-4 w-20 rounded-full border-4 border-green-300" src="img/no-photo.jpg" alt="No user photo available">
             </div>
-            <div>
-                <label for="username">User Name</label>
-                <input class="bg-gray-200" type="text" name="username">
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input class="bg-gray-200" type="text" name="email">
-            </div>
-            <div>
-                <label for="phone">Phone</label>
-                <input class="bg-gray-200" type="text" name="phone">
-            </div>
-            <div>
-                <label for="website">Website</label>
-                <input class="bg-gray-200" type="text" name="website">
-            </div>
-            <button type="submit">Add User</button>
-        </form>
+            <?php require_once "_form.php";?>
+        </div>
     </div>
 </content>
 <?php

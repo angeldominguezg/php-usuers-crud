@@ -2,7 +2,6 @@
 require './users/users.php';
 require './partials/header.php';
 
-
 if(!isset($_GET['id'])) {
     include './partials/not_found.php';
     exit;

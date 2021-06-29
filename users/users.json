@@ -6,7 +6,7 @@
         "email": "Julianne.OConner@kory.org",
         "phone": "0000000000",
         "website": "kale.biz",
-        "extension": "jpg"
+        "extension": "png"
     },
     {
         "id": "5",
@@ -15,16 +15,16 @@
         "email": "Lucio_Hettinger@annie.ca",
         "phone": "453218563",
         "website": "demarco.info",
-        "extension": "jpg"
+        "extension": "png"
     },
     {
-        "id": 6,
+        "id": "6",
         "name": "Mrs. Dennis Schulist",
         "username": "Leopoldo_Corkery",
         "email": "Karley_Dach@jasper.info",
         "phone": "1078412367",
         "website": "ola.org",
-        "extension": "jpg"
+        "extension": "png"
     },
     {
         "id": 7,
@@ -51,12 +51,13 @@
         "website": "conrad.com"
     },
     {
-        "id": 10,
+        "id": "10",
         "name": "Clementina DuBuque",
         "username": "Moriah.Stanton",
         "email": "Rey.Padberg@karina.biz",
         "phone": "024-648-3804",
-        "website": "ambrose.net"
+        "website": "ambrose.net",
+        "extension": false
     },
     {
         "name": "John Doe",
@@ -64,8 +65,8 @@
         "email": "",
         "phone": "12345",
         "website": "",
-        "id": 1879571,
-        "extension": "jpg"
+        "id": "1879571",
+        "extension": "png"
     },
     {
         "name": "Aristotle Hess",
@@ -73,6 +74,49 @@
         "email": "natacyg@mailinator.com",
         "phone": "+1 (116) 654-3992",
         "website": "https:\/\/www.jeqyvijinol.ca",
-        "id": 1085640
+        "id": "1085640",
+        "extension": "png"
+    },
+    {
+        "name": "Hola",
+        "username": "Mundo",
+        "email": "holamundo@mail.com",
+        "phone": "0000000000",
+        "website": "holamundo.com",
+        "id": "1519319",
+        "extension": "png"
+    },
+    {
+        "id": 1032668,
+        "name": "Kevin Alexander",
+        "username": "zonyvamy",
+        "email": "cixic@mailinator.com",
+        "phone": "+1 (584) 339-6297",
+        "website": "https:\/\/www.zohecafu.net"
+    },
+    {
+        "id": 1680174,
+        "name": "Allegra Dodson",
+        "username": "kodihyf",
+        "email": "bosarohox@mailinator.com",
+        "phone": "+1 (208) 945-2779",
+        "website": "https:\/\/www.rewahe.org.uk"
+    },
+    {
+        "id": "1798445",
+        "name": "Elmo Cohen",
+        "username": "nugurac",
+        "email": "jovepi@mailinator.com",
+        "phone": "+1 (201) 381-5935",
+        "website": "https:\/\/www.gytowoqozuh.ws",
+        "extension": false
+    },
+    {
+        "id": 1148247,
+        "name": "Dakota Morrison",
+        "username": "syzuvu",
+        "email": "hihajimoq@mailinator.com",
+        "phone": "+1 (195) 811-4366",
+        "website": "https:\/\/www.bodeniqixifaput.org"
     }
 ]
