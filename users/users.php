@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function getUsers() 
 {
@@ -21,7 +21,7 @@ function getUserById($id)
     return null;
 }
 
-function createUser($data) 
+function createUser($data)
 {
     $users = getUsers();
     $data['id'] = rand(1000000, 2000000);
@@ -30,7 +30,6 @@ function createUser($data)
     putJson($users);
 
     return $data;
-
 }
 
 function updateUser($data, $id)
@@ -74,11 +73,11 @@ function uploadImage($file, $user) {
             mkdir(__DIR__."/images");
         }
 
-        $fileName = $file['photo']['name'];
+        $fileName = $_FILES['photo']['name'];
         $dotPosition = strpos($fileName,  ".");
         $extension = substr($fileName, $dotPosition + 1);
 
-        move_uploaded_file($file['photo']['tmp_name'], __DIR__."/images/${user['id']}.$extension");
+        move_uploaded_file($_FILES['photo']['tmp_name'], __DIR__."/images/${user['id']}.$extension");
 
         $user['extension'] = $extension;
 
