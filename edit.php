@@ -10,17 +10,29 @@ if(!isset($_GET['id'])) {
 $id = $_GET['id'];
 $user =  getUserByID($id);
 
+$errors = [
+    'name' => "",
+    'username' => "",
+    'email' => "",
+    'phone' => "",
+    'website' => ""
+];
+
+
 if(!isset($user)) {
     include './partials/not_found.php';
     exit;
 }
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $user =  updateUser($_POST, $id);
+    $user = array_merge($user, $_POST);
+    $isValid = validateUser($user, $errors);
 
-    uploadImage($_FILES['photo'], $user);
-
-    header('location: index.php');
+    if($isValid) {
+        $user =  updateUser($_POST, $id);
+        uploadImage($_FILES['photo'], $user);
+        header('location: index.php');
+    }
 }
 ?>
 <content>

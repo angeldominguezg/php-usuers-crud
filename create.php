@@ -6,13 +6,29 @@ $user = [
     'username' => "",
     'email' => "",
     'phone' => "",
-    'website' => "",
-    'website' => "",
+    'website' => ""
 ];
+
+$errors = [
+    'name' => "",
+    'username' => "",
+    'email' => "",
+    'phone' => "",
+    'website' => ""
+];
+
+$isValid = true;
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $user = createUser($_POST);
-    uploadImage($_FILES['photo'], $user);
-    header('location: index.php');
+
+    $user = array_merge($user, $_POST);
+    $isValid = validateUser($user, $errors);
+
+    if($isValid) {
+        $user = createUser($_POST);
+        uploadImage($_FILES['photo'], $user);
+        header('location: index.php');
+    }
 }
 ?>
 <content>
@@ -20,11 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="card w-96 shadow-2xl rounded-lg mx-auto">
             <div class="card-header relative h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-t-lg">
                 <h1 class="absolute top-5 left-4 font-extrabold text-4xl right-0 text-white">
-                    <?php if(isset($user['id'])):?>
-                    #<?php echo $user['id']; ?>
-                    <?php else: ?>
                     New User
-                    <?php endif; ?>
                 </h1>
                 <img class="absolute top-4 right-4 w-20 rounded-full border-4 border-green-300" src="img/no-photo.jpg" alt="No user photo available">
             </div>

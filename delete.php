@@ -10,6 +10,6 @@ if (!isset($_POST['id'])) {
 $userId = $_POST['id'];
 deleteUser($userId);
 
-// header("Location: index.php");
+header("Location: index.php");
 
 ?>

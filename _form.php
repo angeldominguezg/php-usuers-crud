@@ -5,30 +5,55 @@
             <label for="name">Name</label>
             <div class="mt-1">
                 <input type="text" class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" name="name" value="<?php echo $user['name']?>">
+                <?php if(isset($errors['name'])): ?>
+                <div class="invalid-feedback text-red-600">
+                    <?php echo $errors['name'];?>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
         <div>
             <label for="user-name">User Name</label>
             <div class="mt-1">
                 <input class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="username" value="<?php echo $user['username']?>">
+                <?php if(isset($errors['username'])): ?>
+                <div class="invalid-feedback text-red-600">
+                    <?php echo $errors['username'];?>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
         <div>
             <label for="email">Email</label>
             <div class="mt-1">
                 <input class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="email" value="<?php echo $user['email']?>">
+                <?php if(isset($errors['email'])): ?>
+                <div class="invalid-feedback text-red-600">
+                    <?php echo $errors['email'];?>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
         <div>
             <label for="phone">Phone</label>
             <div class="mt-1">
                 <input class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="phone" value="<?php echo $user['phone']?>">
+                <?php if(isset($errors['phone'])): ?>
+                <div class="invalid-feedback text-red-600">
+                    <?php echo $errors['phone'];?>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
         <div>
             <label for="website">Website</label>
             <div class="mt-1">
                 <input class="w-full rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" type="text" name="website" value="<?php echo $user['website']?>">
+                <?php if(isset($errors['website'])): ?>
+                <div class="invalid-feedback text-red-600">
+                    <?php echo $errors['website'];?>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
         <div>
