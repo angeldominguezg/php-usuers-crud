@@ -66,9 +66,8 @@ function putJson($users) {
 }
 
 function uploadImage($file, $user) {
-
+    
     if(isset($_FILES['photo']) && $_FILES['photo']['name']){
-
         if(!is_dir(__DIR__."/images")) {
             mkdir(__DIR__."/images");
         }
