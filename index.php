@@ -7,13 +7,14 @@ $users =  getUsers();
 <content class="flex-grow">
     <div class="container mx-auto px-4">
 
+        <!-- Tools row -->
         <div class="text-center m-4">
             <a href="create.php" class="px-2 py-3 border-2 border-blue-900 rounded-lg bg-blue-500 text-white">New fake user</a>
         </div>
 
         <div class="grid sm:grid-cols-1 md:grid-cols-4 gap-6">
         <?php foreach($users as $user): ?>
-            <div class="card border-2 border-gray-300 rounded-lg px-2 py-2">
+            <div class="card shadow-xl  rounded-lg px-2 py-2">
                 <div class="card-header h-12">
                     <div class="relative">
                         <h1 class="absolute left-0 top-0 font-extrabold text-4xl right-0 text-gray-700">#<?php echo $user['id']; ?></h1>
