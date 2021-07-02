@@ -8,7 +8,7 @@
     <link href="./css/tailwind.css" rel="stylesheet">
 </head>
 <!-- <body class="sm:bg-red-400 md:bg-yellow-300 lg:bg-green-300 x1: bg-blue-300"> -->
-<body>
+<body class="flex flex-col min-h-screen">
     <header class="container mx-auto px-4">
         <div class="space-x-2">
             <img class="inline-block h-32" src="./img/logo.png" alt="Users admin Logo">

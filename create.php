@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<content>
+<content class="flex-grow">
     <div class="container mx-auto px-4">
         <div class="card w-96 shadow-2xl rounded-lg mx-auto">
             <div class="card-header relative h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-t-lg">

@@ -16,7 +16,7 @@ if(!isset($user)) {
 }
 
 ?>
-<content>
+<content class="flex-grow">
     <div class="container mx-auto px-4">
 
         <div class="card w-96 shadow-2xl rounded-lg mx-auto">
