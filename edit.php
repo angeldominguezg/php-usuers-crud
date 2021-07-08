@@ -1,6 +1,8 @@
 <?php
 require './users/User.php';
 require './partials/header.php';
+require './users/user_validations.php';
+
 $USER = new User();
 
 if(!isset($_GET['id'])) {
@@ -27,7 +29,7 @@ if(!isset($user)) {
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = array_merge($user, $_POST);
-    $isValid = $USER->validateUser($user, $errors);
+    $isValid = validateUser($user, $errors);
 
     if($isValid) {
         $user =  $USER->updateUser($_POST, $id);
