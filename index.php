@@ -1,7 +1,9 @@
 <?php
-require './users/users.php';
+// require './users/users.php';
+require './users/User.php';
 require './partials/header.php';
-$users =  getUsers();
+$USER = new User();
+$users =  $USER->getUsers();
 ?>
 
 <content class="flex-grow">
@@ -14,7 +16,7 @@ $users =  getUsers();
 
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <?php foreach($users as $user): ?>
-            <div class="card shadow-xl bg-green-100 rounded-lg px-2 py-2">
+            <div class="card border-2 border-gray-50 shadow-xl rounded-lg px-2 py-2">
                 <div class="card-header h-12">
                     <div class="relative">
                         <h1 class="absolute left-0 top-0 font-extrabold text-4xl right-0 text-gray-700">#<?php echo $user['id']; ?></h1>

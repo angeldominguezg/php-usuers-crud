@@ -1,6 +1,7 @@
 <?php
-require './users/users.php';
+require './users/User.php';
 require './partials/header.php';
+$USER = new User();
 
 if(!isset($_GET['id'])) {
     include './partials/not_found.php';
@@ -8,7 +9,7 @@ if(!isset($_GET['id'])) {
 }
 
 $id = $_GET['id'];
-$user =  getUserByID($id);
+$user =  $USER->getUserByID($id);
 
 $errors = [
     'name' => "",
@@ -26,11 +27,11 @@ if(!isset($user)) {
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = array_merge($user, $_POST);
-    $isValid = validateUser($user, $errors);
+    $isValid = $USER->validateUser($user, $errors);
 
     if($isValid) {
-        $user =  updateUser($_POST, $id);
-        uploadImage($_FILES['photo'], $user);
+        $user =  $USER->updateUser($_POST, $id);
+        $USER->uploadImage($_FILES['photo'], $user);
         header('location: index.php');
     }
 }

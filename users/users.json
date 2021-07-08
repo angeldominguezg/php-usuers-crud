@@ -1,8 +1,8 @@
 [
     {
         "id": "4",
-        "name": "Patricia Lebsack",
-        "username": "Karianne",
+        "name": "Patricia Lebsack USER",
+        "username": "Karianne USER",
         "email": "Julianne.OConner@kory.org",
         "phone": "1220001020120",
         "website": "kale.biz",
@@ -133,6 +133,15 @@
         "email": "wuvad@mailinator.com",
         "phone": "321312312321",
         "website": "https:\/\/www.nidexodelamuh.ca",
+        "extension": "png"
+    },
+    {
+        "id": 1825365,
+        "name": "MacKenzie Yates",
+        "username": "zujuzijoz",
+        "email": "sizomaxod@mailinator.com",
+        "phone": "768678687678",
+        "website": "https:\/\/www.cygof.us",
         "extension": "png"
     }
 ]

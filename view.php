@@ -1,6 +1,8 @@
 <?php
-require './users/users.php';
+require './users/User.php';
 require './partials/header.php';
+
+$USER = new User();
 
 if(!isset($_GET['id'])) {
     include './partials/not_found.php';
@@ -8,7 +10,7 @@ if(!isset($_GET['id'])) {
 }
 
 $id = $_GET['id'];
-$user =  getUserByID($id);
+$user = $USER->getUserById($id);
 
 if(!isset($user)) {
     include './partials/not_found.php';
