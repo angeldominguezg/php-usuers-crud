@@ -51,6 +51,19 @@ class User
 
     }
 
+    function deleteUser($id)
+    {
+        $users = $this->getUsers();
+
+        foreach($users as $index => $user) {
+            if ($user['id'] == $id) {
+                array_splice($users, $index, 1);
+            }
+        }
+
+        $this->putJson($users);
+    }
+
     public function uploadImage($file, $user) 
     {
         if(isset($_FILES['photo']) && $_FILES['photo']['name']){

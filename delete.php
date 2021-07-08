@@ -1,6 +1,8 @@
 <?php
 include './partials/header.php';
-require __DIR__ . '/users/users.php';
+require __DIR__ . '/users/User.php';
+
+$USER = new User;
 
 if (!isset($_POST['id'])) {
     // TODO Not Found Page
@@ -8,7 +10,7 @@ if (!isset($_POST['id'])) {
 }
 
 $userId = $_POST['id'];
-deleteUser($userId);
+$USER->deleteUser($userId);
 
 header("Location: index.php");
 
