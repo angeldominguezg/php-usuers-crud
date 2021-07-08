@@ -1,6 +1,8 @@
 <?php
-require './users/users.php';
+require './users/User.php';
 require './partials/header.php';
+require './users/user_validations.php';
+
 $user = [
     'name' => "",
     'username' => "",
@@ -25,8 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $isValid = validateUser($user, $errors);
 
     if($isValid) {
-        $user = createUser($_POST);
-        uploadImage($_FILES['photo'], $user);
+        $USER = new User;
+        $user = $USER->createUser($_POST);
+        $USER->uploadImage($_FILES['photo'], $user);
         header('location: index.php');
     }
 }

@@ -19,6 +19,17 @@ class User
         return null;
     }
 
+    function createUser($data)
+    {
+        $users = $this->getUsers();
+        $data['id'] = rand(1000000, 2000000);
+        $users[] = $data;
+
+        $this->putJson($users);
+
+        return $data;
+    }
+
     public function getUsers()
     {
         return json_decode(file_get_contents(__DIR__.'/users.json'), true);
