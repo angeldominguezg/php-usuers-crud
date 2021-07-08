@@ -1,5 +1,4 @@
 <?php
-// require './users/users.php';
 require './users/User.php';
 require './partials/header.php';
 $USER = new User();
@@ -23,7 +22,7 @@ $users =  $USER->getUsers();
                         <?php if(!isset($user['extension'])): ?>
                             <img class="absolute top-0 right-0 w-12 rounded-full border-4 border-green-300" src="img/no-photo.jpg" alt="No user photo available">
                         <?php else: ?>
-                            <img class="absolute top-0 right-0 w-12 rounded-full border-4 border-green-300" src="users/images/<?php echo $user['id'].".".$user['extension']?>" alt="No user photo available">
+                            <img class="absolute top-0 right-0 w-12 rounded-full border-4 border-green-300" src="users/images/<?php echo $user['id'].".".$user['extension']?>" alt="User photo">
                         <?php endif?>
                     </div>
                 </div>
