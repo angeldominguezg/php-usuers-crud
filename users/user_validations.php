@@ -13,7 +13,7 @@ function validateUser($user, &$errors){
         $errors['username'] = "The username is required and it must be more than 5 and less then 15 characters.";
     }
 
-    if($user['email'] && !filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
+    if(!$user['email'] && !filter_var($user['email'], FILTER_VALIDATE_EMAIL)) {
         $isValid = false;
         $errors['email'] = "This must be a valid email.";
     }
